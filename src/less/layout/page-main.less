@@ -1,0 +1,80 @@
+.page-main {
+  width: 725px;
+  padding: 0 100px;
+  padding-bottom: 50px;
+  background: url("../img/crack-left.png") no-repeat left top,
+              url("../img/crack-right.png") no-repeat right bottom 100px;
+  background-color: @bg-transparent-color;
+
+  @media @mobile-widths {
+    width: 100%;
+    padding: 0 20px;
+    flex-grow: 1;
+    background: @bg-transparent-color;
+  }
+
+  &__index-inner {
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+    background: url("../tmp/ugc/img/island.png") no-repeat bottom;
+
+    @media @mobile-widths {
+      height: auto;
+      margin-top: 3%;
+      background: none;
+    }
+  }
+
+  &__title {
+    .title-common();
+    text-align: center;
+    font-size: @title-font-size;
+    line-height: @title-font-size;
+    margin: 50px 0;
+    letter-spacing: 2px;
+
+    @media @mobile-widths {
+      margin: 40px 0;
+    }
+  }
+
+  &__subsubtitle {
+    .subsubtitle();
+  }
+
+  &__subtitle {
+    .subtitle();
+  }
+
+  &__link {
+    .link-common();
+  }
+
+  &__text-block {
+    .clearfix();
+
+    &--info {
+      font-style: italic;
+      padding-left: 15px;
+      border-left: 1px solid #333333;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__comment {
+    .comment();
+
+    &--justify {
+      text-align: justify;
+    }
+  }
+
+  &__bottom-text {
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: @smallest-font-size;
+  }
+}

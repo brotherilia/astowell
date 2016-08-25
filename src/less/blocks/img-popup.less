@@ -1,0 +1,27 @@
+.img-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-color: @bg-transparent-dark-color;
+
+  &__header {
+    display: none;
+    .popup-text();
+    font-size: @subtitle-font-size;
+  }
+
+  &__main {
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+
+  &__footer {
+    display: none;
+    .popup-text();
+  }
+}
