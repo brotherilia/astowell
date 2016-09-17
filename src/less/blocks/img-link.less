@@ -2,26 +2,44 @@
   box-shadow: 0 0 30px 5px rgba(255, 255, 255, .2);
   cursor: pointer;
 
+  @media @mobile-widths {
+    cursor: default;
+  }
+
   &:hover {
-    opacity: .3;
+    opacity: 0.3;
     box-shadow: none;
+
+    @media @mobile-widths {
+      box-shadow: 0 0 30px 5px rgba(255, 255, 255, .2);
+      opacity: 1;
+    }
   }
 
   &:active {
-    opacity: .2;
+    opacity: 0.2;
     box-shadow: none;
+
+    @media @mobile-widths {
+      opacity: 0.2;
+    }
   }
 
   &--dsbl {
-    opacity: .3;
+    opacity: 0.3;
     box-shadow: none;
-    cursor: inherit;
+    cursor: default;
     position: relative;
 
     &:hover,
     &:active {
-      opacity: .3;
+      opacity: 0.3;
       box-shadow: none;
+
+      @media @mobile-widths {
+        opacity: 0.3;
+        box-shadow: none;
+      }
     }
   }
 }

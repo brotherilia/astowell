@@ -45,11 +45,56 @@
   color: @link-color;
   text-decoration: none;
 
+  @media @mobile-widths {
+    cursor: default;
+  }
+
   &:hover {
     color: @link-hover-color;
 
     @media @mobile-widths {
       color: @link-color;
+    }
+  }
+
+  &:active {
+    color: @link-active-color;
+
+    @media @mobile-widths {
+      color: @link-active-color;
+    }
+  }
+}
+
+.btn-common() {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  width: @icon-size;
+  height: @icon-size;
+  cursor: pointer;
+
+  @media @mobile-widths {
+    cursor: default;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media @mobile-widths {
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 }
@@ -95,6 +140,7 @@
     @bg-transparent-dark-color 70%,
     @bg-transparent-light-color 100%
   );
+  box-shadow: 0 0 1px 1px @link-color;
   text-align: center;
   padding: 10px;
   color: @link-color;
