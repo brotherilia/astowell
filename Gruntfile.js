@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
     //*** Очистка ***//
     clean: {
-      build: ["build/**/*.html", "build/favicon.ico", "build/css/", "build/img/", "build/js/"]
+      build: ["build/**/*.html", "build/favicon.ico", "build/css/", "build/img/", "build/js/", "build/fonts/"]
     },
 
     //*** Копирование ***//
@@ -19,6 +19,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: "src/",
           src: [
+            "fonts/**/*.{eot,ttf,woff,woff2}",
             "css/**/*.css",
             "js/**/*.js",
             "img/**/*.{jpg,png,gif,svg}",
@@ -142,7 +143,10 @@ module.exports = function(grunt) {
           "build/gallery_13_03.html": ["build/gallery_13_03.html"],
 
           // Крым (04.2015)
-          "build/gallery_14.html": ["build/gallery_14.html"]
+          "build/gallery_14.html": ["build/gallery_14.html"],
+
+          // Святая Гора Афон (05.2016)
+          "build/gallery_15.html": ["build/gallery_15.html"]
         }
       }
     },
@@ -189,7 +193,7 @@ module.exports = function(grunt) {
     //*** Конкатенация CSS ***//
     concat: {
       css: {
-        src: [ "build/css/normalize.css", "build/css/style.css" ],
+        src: [ "build/css/normalize.css", "build/css/fonts.css", "build/css/style.css" ],
         dest: "build/css/style.css",
         options: {
           separator: "\n\r/***** CONCATENATION HERE! *****/\n\r"

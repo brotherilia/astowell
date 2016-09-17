@@ -7,7 +7,7 @@ $(document).ready(function(){
     var popupBgr = $(this).attr("id");
     var popupTitle = $(this).attr("title");
     var popupComment = $(this).attr("alt");
-    $(".img-popup__main").css({"background-image": "url('../"+popupBgr+"')"});
+    $(".img-popup").css({"background-image": "url('../"+popupBgr+"')"});
     if (popupTitle){
       $(".img-popup__header").text(popupTitle).css({"display": "block"});
     }

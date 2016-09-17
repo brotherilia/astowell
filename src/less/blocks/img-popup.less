@@ -5,19 +5,16 @@
   width: 100%;
   height: 100vh;
   flex-direction: column;
+  justify-content: space-between;
   background-color: @bg-transparent-dark-color;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
 
   &__header {
     display: none;
     .popup-text();
     font-size: @subtitle-font-size;
-  }
-
-  &__main {
-    flex-grow: 1;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
   }
 
   &__footer {

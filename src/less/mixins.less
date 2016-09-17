@@ -89,7 +89,12 @@
 }
 
 .popup-text() {
-  background-color: @bg-transparent-light-color;
+  background-image: linear-gradient(to right,
+    @bg-transparent-light-color,
+    @bg-transparent-dark-color 30%,
+    @bg-transparent-dark-color 70%,
+    @bg-transparent-light-color 100%
+  );
   text-align: center;
   padding: 10px;
   color: @link-color;
