@@ -328,7 +328,7 @@ module.exports = function(grunt) {
     "copy:build",
     "processhtml",
     "css",
-    "uglify",
+    "uglify"
   ]);
 
   grunt.registerTask("deploy", [
